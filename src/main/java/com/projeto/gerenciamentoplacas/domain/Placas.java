@@ -2,11 +2,18 @@ package com.projeto.gerenciamentoplacas.domain;
 
 import java.io.Serializable;
 
-//Serializable é uma declaração q/ diz q/ a classe implementa a interface Serializable. Ela diz q/ os objetos da classe poderão ser convertidos p/ uma sequência de bytes. Serve p/ q/ os objetos possam ser gravados em arquivos, p/ trafegar em rede, etc.
-public class Placas implements Serializable{
+import javax.persistence.Entity;//especificação do jpa.
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Placas implements Serializable{//Serializable é uma declaração q/ diz q/ a classe implementa a interface Serializable. Ela diz q/ os objetos da classe poderão ser convertidos p/ uma sequência de bytes. Serve p/ q/ os objetos possam ser gravados em arquivos, p/ trafegar em rede, etc.
 	
 	private static final long serialVersionUID = 1L;//1ª versão.
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)//define a estratégia de geração automática dos ids das minhas placas.
 	private Integer id;
 	private String nome;
 	private String descricao;

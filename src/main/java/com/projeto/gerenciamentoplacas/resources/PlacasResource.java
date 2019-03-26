@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 //Esta classe é um controlador rest que responde pelo endpoint /categorias.
 @RestController
-@RequestMapping(value="/categorias")
+@RequestMapping(value="/placas")
 public class PlacasResource {
 
 	//Para ser uma função REST, tem que associá-la a algum dos verbos do http.
