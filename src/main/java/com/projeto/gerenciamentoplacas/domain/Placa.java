@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Placas implements Serializable{//Serializable é uma declaração q/ diz q/ a classe implementa a interface Serializable. Ela diz q/ os objetos da classe poderão ser convertidos p/ uma sequência de bytes. Serve p/ q/ os objetos possam ser gravados em arquivos, p/ trafegar em rede, etc.
+public class Placa implements Serializable{//Serializable é uma declaração q/ diz q/ a classe implementa a interface Serializable. Ela diz q/ os objetos da classe poderão ser convertidos p/ uma sequência de bytes. Serve p/ q/ os objetos possam ser gravados em arquivos, p/ trafegar em rede, etc.
 	
 	private static final long serialVersionUID = 1L;//1ª versão.
 	
@@ -19,10 +19,10 @@ public class Placas implements Serializable{//Serializable é uma declaração q
 	private String descricao;
 	private String equipamento;
 	
-	public Placas() {//instancio os objetos s/ jogar nada p/ os atributos.
+	public Placa() {//instancio os objetos s/ jogar nada p/ os atributos.
 	}
 
-	public Placas(Integer id, String nome, String descricao, String equipamento) {
+	public Placa(Integer id, String nome, String descricao, String equipamento) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -79,7 +79,7 @@ public class Placas implements Serializable{//Serializable é uma declaração q
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Placas other = (Placas) obj;
+		Placa other = (Placa) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
